@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "iosproject",
+    "slug": "iosproject",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Приложению нужен доступ к галерее для выбора фото и видео",
+          "cameraPermission": "Приложению нужен доступ к камере для съемки фото и видео",
+          "microphonePermission": "Приложению нужен доступ к микрофону для записи видео"
+        }
+      ]
+    ],
+    "ios": {
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "NSCameraUsageDescription": "Приложению нужен доступ к камере для съемки фото и видео",
+        "NSPhotoLibraryUsageDescription": "Приложению нужен доступ к галерее для выбора фото и видео",
+        "NSMicrophoneUsageDescription": "Приложению нужен доступ к микрофону для записи видео"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.anonymous.iosproject"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
+
